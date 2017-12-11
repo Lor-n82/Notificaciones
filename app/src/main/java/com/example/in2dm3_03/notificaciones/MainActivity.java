@@ -1,5 +1,6 @@
 package com.example.in2dm3_03.notificaciones;
 
+import android.app.Notification;
 import android.app.NotificationChannel;
 import android.app.NotificationManager;
 import android.app.PendingIntent;
@@ -39,6 +40,15 @@ public class MainActivity extends AppCompatActivity {
         builder.setContentText("Notification text");
         builder.setContentIntent(contentIntent);
         builder.setAutoCancel(true);
+
+        builder.setDefaults(NotificationCompat.DEFAULT_VIBRATE);
+        builder.setDefaults(NotificationCompat.DEFAULT_SOUND);
+
+        Notification notif= builder.build();
+
+        final int HELLO_ID=1;
+        mNotificationManager.notify(HELLO_ID,notif);
+        finish();
     }
 
     public void clickfin2(View v){
