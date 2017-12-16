@@ -3,6 +3,7 @@ package com.example.in2dm3_03.notificaciones;
 import android.support.v4.widget.ImageViewCompat;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.text.Layout;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -20,6 +21,15 @@ public class ToastPersonalizado extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_toast_personalizado);
 
+        LayoutInflater inf = getLayoutInflater();
+        View vista =inf.inflate(R.layout.activity_toast_personalizado, (ViewGroup) findViewById(R.id.ContraintLayout));
+
+        TextView textotoast=findViewById(R.id.textViewToast);
+        textotoast.setText("Este es el texto");
+
+        Toast t = new Toast(getApplicationContext());
+        t.setDuration(Toast.LENGTH_LONG);
+        t.show();
     }
 
 

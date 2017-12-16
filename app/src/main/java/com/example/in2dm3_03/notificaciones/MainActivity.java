@@ -104,9 +104,9 @@ public class MainActivity extends AppCompatActivity {
         builder.setWhen(when);
 
         RemoteViews contentView =new RemoteViews(getPackageName(),R.layout.activity_toast_personalizado);
-        contentView.setImageViewResource(R.id.imageView, R.drawable.ic_launcher_foreground);
-        contentView.setTextViewText(R.id.textViewToast,"Personalizada");
-        contentView.setTextViewText(R.id.textView3,"Texto personalizado");
+        //contentView.setImageViewResource(R.id.imageView, R.drawable.ic_launcher_foreground);
+        contentView.setTextViewText(R.id.textViewToast,"hola");
+        //contentView.setTextViewText(R.id.textView3,"Texto personalizado");
         builder.setAutoCancel(true);
         Intent intent =new Intent(this,ToastPersonalizado.class);
         PendingIntent contentIntent = PendingIntent.getActivity(this,0,intent,0);
