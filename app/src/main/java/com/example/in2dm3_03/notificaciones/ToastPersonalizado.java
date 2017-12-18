@@ -22,14 +22,17 @@ public class ToastPersonalizado extends AppCompatActivity {
         setContentView(R.layout.activity_toast_personalizado);
 
         LayoutInflater inf = getLayoutInflater();
-        View vista =inf.inflate(R.layout.activity_toast_personalizado, (ViewGroup) findViewById(R.id.ContraintLayout));
+        View vista =inf.inflate(R.layout.activity_toast_personalizado, (ViewGroup) findViewById(R.id.activity_toast_personalizado));
 
-        TextView textotoast=findViewById(R.id.textViewToast);
+        TextView textotoast=(TextView) vista.findViewById(R.id.textViewToast);
         textotoast.setText("Este es el texto");
 
         Toast t = new Toast(getApplicationContext());
         t.setDuration(Toast.LENGTH_LONG);
+        t.setView(vista);
         t.show();
+
+        finish();
     }
 
 

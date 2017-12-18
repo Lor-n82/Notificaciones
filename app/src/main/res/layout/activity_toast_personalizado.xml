@@ -17,6 +17,7 @@
         android:layout_marginLeft="28dp"
         android:layout_marginStart="28dp"
         android:layout_marginTop="18dp"
-        android:text="@string/mensaje"/>
+        android:background="@color/colorAccent"
+        android:text="@string/mensaje" />
 
 </RelativeLayout>
